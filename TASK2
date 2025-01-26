@@ -1,0 +1,19 @@
+#include <Servo.h>
+
+Servo myServo;  // Create a servo object
+
+void setup() {
+  myServo.attach(9);  // Attach servo to pin 9
+  myServo.write(0);   // Initial position (OFF state)
+  delay(1000);
+}
+
+void loop() {
+  // Simulate ON state
+  myServo.write(90);  // Rotate to 90 degrees to toggle ON
+  delay(2000);        // Wait for 2 seconds (simulate ON duration)
+
+  // Simulate OFF state
+  myServo.write(0);   // Rotate back to 0 degrees to toggle OFF
+  delay(2000);        // Wait for 2 seconds (simulate OFF duration)
+}
